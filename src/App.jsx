@@ -1,18 +1,16 @@
-import "./styles.css"
 import { Box } from '@mui/material'
-import { Routes, Route } from 'react-router-dom'
-import ProtectedRoute from "./RouteWrapper/ProtectedRoute"
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { Route, Routes } from 'react-router-dom'
+import { BASE_API } from "./constants"
 import HomePage from "./HomePage/HomePage"
 import LoginPage from "./LoginPage/LoginPage"
-import { useContext } from "react"
-import { AppContext } from "./redux_fake/AppContext"
-import { useEffect } from "react"
-import { axiosGet } from "./utils/axiosUtils"
-import { BASE_API } from "./constants"
-import { APP_REDUCER_TYPE } from "./redux_fake/AppReducer"
 import Navbar from "./Navbar/Navbar"
-
+import { AppContext } from "./redux_fake/AppContext"
+import { APP_REDUCER_TYPE } from "./redux_fake/AppReducer"
+import "./styles.css"
+import { axiosGet } from "./utils/axiosUtils"
+import './styles/CustomScrollBar.css'
+import './styles/Draggable.css'
 const App = () => {
   const [appState, dispatch] = useContext(AppContext)
   const [checkToken, setCheckToken] = useState(false)

@@ -13,11 +13,11 @@ const Navbar = () => {
   }
   const navigate = useNavigate()
   return (
-    <AppBar component='nav' color="transparent">
+    <AppBar component='nav' color='transparent'>
       <Toolbar
         sx={{
           display: 'flex',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
         }}
       >
         <Typography component='div' variant='h6' onClick={() => navigate('/')}

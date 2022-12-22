@@ -1,0 +1,10 @@
+@keyframes throw-trash {
+  0%   {top: 0px;}
+  40%  {top: -20px;transform: rotate(90deg) scale(0.5);}
+  100% {top: 100px;transform: rotate(90deg) scale(0);}
+}
+
+.trash {
+  animation: throw-trash 1s;
+  animation-fill-mode: forwards
+}
